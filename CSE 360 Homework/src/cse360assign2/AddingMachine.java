@@ -1,3 +1,13 @@
+/*
+ * Name: Kent Larson
+ * ID: 1213010550
+ * Class ID: 70641
+ * Assignment #: 2
+ * Description: AddingMachine allows a user to add to, subtract from, or clear
+ * 				a total value as well as display the history of transactions of
+ * 				the total.
+ */
+
 package cse360assign2;
 
 /**
@@ -7,12 +17,15 @@ package cse360assign2;
 public class AddingMachine {
 
 	private int total;
+	private String history;
 	
 	/**
-	 * The constructor of the class that sets the initial total to 0.
+	 * The constructor of the AddingMachine object that sets the initial total
+	 * to 0 and the String "history" to "0".
 	 */
 	public AddingMachine () {
 		total = 0;  // not needed - included for clarity
+		history = "0";
 	}
 	
 	/**
@@ -21,41 +34,51 @@ public class AddingMachine {
 	 * @return 0 (as of right now)
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
 	 * Adds the given value to the total.
+	 * <p>
+	 * The value that is added to the total is also "stored" into the history
+	 * so that it can be shown when "toString" is called.
 	 * 
 	 * @param value	amount to be added
 	 */
 	public void add (int value) {
-		
+		total = total + value;
+		history = history + " + " + value;
 	}
 	
 	/**
 	 * Subtracts the given value to the total.
+	 * <p>
+	 * The value that is subtracted from the total is also "stored" into the
+	 * history so that it can be shown when "toString" is called.
 	 * 
 	 * @param value	amount to be subtracted
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
+		history = history + " - " + value;
 	}
 		
 	/**
 	 * Returns the history of transactions as a string in terms of numbers and
 	 * operators.
 	 * 
-	 * @return a blank string (as of right now)
+	 * @return The String variable "history" as it contains the transaction
+	 * 		   history of the total.
 	 */
 	public String toString () {
-		return "";
+		return history;
 	}
 	
 	/**
-	 * Clears the total value.
+	 * Clears the total value and the history of transactions.
 	 */
 	public void clear() {
-	
+		total = 0;
+		history = "0";
 	}
 }
