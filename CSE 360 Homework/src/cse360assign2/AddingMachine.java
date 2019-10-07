@@ -41,7 +41,7 @@ public class AddingMachine {
 	 * Adds the given value to the total.
 	 * <p>
 	 * The value that is added to the total is also "stored" into the history
-	 * so that it can be shown when "toString" is called.
+	 * so that it can be shown when the method "toString" is called.
 	 * 
 	 * @param value	amount to be added
 	 */
