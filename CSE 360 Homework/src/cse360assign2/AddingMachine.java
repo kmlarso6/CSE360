@@ -12,7 +12,8 @@ package cse360assign2;
 
 /**
  * AddingMachine is the base class that allows a user to add and subtract a
- * value to a total and the total value's history is kept. 
+ * value to a total and the total value's history is kept. The total and
+ * history can also be cleared.
  */
 public class AddingMachine {
 
@@ -31,7 +32,7 @@ public class AddingMachine {
 	/**
 	 * Returns the total value after previous transactions have been completed.
 	 * 
-	 * @return 0 (as of right now)
+	 * @return The integer "total".
 	 */
 	public int getTotal () {
 		return total;
@@ -54,7 +55,7 @@ public class AddingMachine {
 	 * Subtracts the given value to the total.
 	 * <p>
 	 * The value that is subtracted from the total is also "stored" into the
-	 * history so that it can be shown when "toString" is called.
+	 * history so that it can be shown when the method "toString" is called.
 	 * 
 	 * @param value	amount to be subtracted
 	 */
